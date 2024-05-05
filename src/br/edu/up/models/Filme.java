@@ -1,5 +1,8 @@
 package br.edu.up.models;
 
+/**
+ * Classe que Representa um filme.
+ */
 public class Filme {
     private int codigoFilme;
     private String nomeFilme;
@@ -7,9 +10,21 @@ public class Filme {
     private int dataEstreiaFilme;
     private String sinopseFilme;
 
+    /**
+     * Construtor Vázio
+     */
     public Filme() {
     }
 
+    /**
+     * Construtor com todos os atributos.
+     *
+     * @param codigoFilme código único do filme.
+     * @param nomeFilme nome do filme.
+     * @param generoFilme gênero do filme.
+     * @param dataEstreiaFilme data de estreia do filme.
+     * @param sinopseFilme sinopse do filme.
+     */
     public Filme(int codigoFilme, String nomeFilme, String generoFilme, int dataEstreiaFilme, String sinopseFilme) {
         this.codigoFilme = codigoFilme;
         this.nomeFilme = nomeFilme;
@@ -58,6 +73,11 @@ public class Filme {
         this.sinopseFilme = sinopseFilme;
     }
 
+    /**
+     * Retorna uma representação textual do objeto Filme.
+     *
+     * @return  Uma string que representa o objeto Filme.
+     */
     @Override
     public String toString() {
         return "Filme{" +

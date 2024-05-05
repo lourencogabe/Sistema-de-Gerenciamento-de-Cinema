@@ -1,11 +1,26 @@
 package br.edu.up.models;
 
+/**
+ * Classe que Representa um sessão.
+ */
 public class Sessao extends Filme{
     private int codigoSessao;
     private int quantidadeLugaresSessao;
-
     private int dataSessao;
 
+    /**
+     * Construtor Vázio
+     */
+    public Sessao() {
+    }
+
+    /**
+     * Construtor com todos os atributos da classe e herança.
+     *
+     * @param codigoSessao código da sessão.
+     * @param quantidadeLugaresSessao quantidade de lugares disponiveis.
+     * @param dataSessao data de agendamento da sessão.
+     */
     public Sessao(int codigoFilme, String nomeFilme, String generoFilme, int dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao) {
         super(codigoFilme, nomeFilme, generoFilme, dataEstreiaFilme, sinopseFilme);
         this.codigoSessao = codigoSessao;
@@ -37,6 +52,11 @@ public class Sessao extends Filme{
         this.dataSessao = quantidadeLugaresSessao;
     }
 
+    /**
+     * Retorna uma representação textual do objeto sessão.
+     *
+     * @return  Uma string que representa o objeto sessão.
+     */
     @Override
     public String toString() {
         return "Sessao{" +
