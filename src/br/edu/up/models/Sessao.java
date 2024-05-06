@@ -8,9 +8,6 @@ public class Sessao extends Filme{
     private int quantidadeLugaresSessao;
     private int dataSessao;
 
-    /**
-     * Construtor Vázio
-     */
     public Sessao() {
     }
 
@@ -21,7 +18,7 @@ public class Sessao extends Filme{
      * @param quantidadeLugaresSessao quantidade de lugares disponiveis.
      * @param dataSessao data de agendamento da sessão.
      */
-    public Sessao(int codigoFilme, String nomeFilme, String generoFilme, int dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao) {
+    public Sessao(String codigoFilme, String nomeFilme, String generoFilme, String dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao) {
         super(codigoFilme, nomeFilme, generoFilme, dataEstreiaFilme, sinopseFilme);
         this.codigoSessao = codigoSessao;
         this.quantidadeLugaresSessao = quantidadeLugaresSessao;

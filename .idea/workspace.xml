@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55276c30-bd78-4f2b-a692-84ab68dd6027" name="Changes" comment="feat: primeiro commit">
+      <change afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/FilmeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/IngressoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Filme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Ingresso.java" afterDir="false" />
@@ -76,7 +78,7 @@
       <workItem from="1714000319050" duration="5829000" />
       <workItem from="1714649175727" duration="6898000" />
       <workItem from="1714865856056" duration="8444000" />
-      <workItem from="1714928121290" duration="275000" />
+      <workItem from="1714928121290" duration="29600000" />
     </task>
     <task id="LOCAL-00001" summary="feat: primeiro commit">
       <option name="closed" value="true" />

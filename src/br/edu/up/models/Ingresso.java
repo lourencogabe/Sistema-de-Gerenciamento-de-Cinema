@@ -1,5 +1,7 @@
 package br.edu.up.models;
 
+import java.util.ArrayList;
+
 /**
  * Classe que Representa um ingresso.
  */
@@ -19,7 +21,7 @@ public class Ingresso extends Sessao{
      * @param codigoIngresso código do ingresso.
      * @param dataEmissaoIngresso data de emissão do ingresso.
      */
-    public Ingresso(int codigoFilme, String nomeFilme, String generoFilme, int dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao, int codigoIngresso, int dataEmissaoIngresso) {
+    public Ingresso(String codigoFilme, String nomeFilme, String generoFilme, String dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao, int codigoIngresso, int dataEmissaoIngresso) {
         super(codigoFilme, nomeFilme, generoFilme, dataEstreiaFilme, sinopseFilme, codigoSessao, quantidadeLugaresSessao, dataSessao);
         this.codigoIngresso = codigoIngresso;
         this.dataEmissaoIngresso = dataEmissaoIngresso;
@@ -39,6 +41,11 @@ public class Ingresso extends Sessao{
 
     public void setDataEmissaoIngresso(int dataEmissaoIngresso) {
         this.dataEmissaoIngresso = dataEmissaoIngresso;
+    }
+
+    public void venderIngresso(){
+        ArrayList<Ingresso> listaIngresso = new ArrayList<>();
+
     }
 
     /**

@@ -2,12 +2,13 @@ package br.edu.up.models;
 
 import java.io.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Classe responsável pela gestão dos arquivos.
+ */
 public class FileManager {
-    String caminho = "/Sistema de Gerenciamento de Cinema/src/br/edu/up/arquivos";
-    File diretorio = new File(caminho + "Teste");
-    File arquivo = new File(diretorio, "ingresso.txt");
 
     /**
      * Método responsável por ler o arquivo e retornar em uma String.
@@ -15,34 +16,37 @@ public class FileManager {
      * @param caminhoArquivo caminho do arquivo para leitura.
      * @return String contendo o conteúdo do arquivo ou uma String vazia se ocorrer um erro.
      */
-    public static String lerTextoArquivo(String caminhoArquivo) {
+    public static ArrayList<String> retornaListaArquivo(String caminhoArquivo) {
+        ArrayList<String> listaArquivo = new ArrayList<>();
         try {
             File arquivo = new File(caminhoArquivo);
             Scanner leitorArquivo = new Scanner(arquivo);
-            StringBuilder conteudoArquivo = new StringBuilder();
-            String linha;
 
-            while (leitorArquivo.hasNext()) {
-                linha = leitorArquivo.nextLine();
-                conteudoArquivo.append(linha).append("\n");
+            while (leitorArquivo.hasNextLine()) {
+                String linha = leitorArquivo.nextLine();
+                listaArquivo.add(linha);
             }
-            return conteudoArquivo.toString();
+            leitorArquivo.close();
         } catch (IOException e) {
             System.out.println("Erro ao ler arquivo " + caminhoArquivo + " - " + e.getMessage());
-            return "";
         }
+            return listaArquivo;
     }
 
     /**
-     * Método responsável pela escrita no arquivo.
+     * Método responsável pela escrita de arraylist no arquivo.
      *
      * @param caminhoArquivo caminho do arquivo para leitura.
-     * @param conteudo conteúdo do arquivo para escrita.
+     * @param lista conteúdo do arquivo para escrita.
      */
-    public static void escreverTextoArquivo(String caminhoArquivo, String conteudo) {
+    public static void escreverListaArquivo(String caminhoArquivo, ArrayList<String> lista) {
         try {
-            FileWriter escritor = new FileWriter(caminhoArquivo);
-            escritor.write(conteudo);
+            FileWriter leitor = new FileWriter(caminhoArquivo);
+            for (String item : lista) {
+                leitor.write(item + "\n");
+            }
+            leitor.close();
+            System.out.println("ArrayList gravado com sucesso no arquivo.");
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo: " + caminhoArquivo + " - " + e.getMessage());
         }
@@ -54,10 +58,12 @@ public class FileManager {
      * @param caminhoArquivo caminho do arquivo para leitura.
      * @param conteudo conteúdo do arquivo para escrita.
      */
-    public static void acrescentarTextoArquivo(String caminhoArquivo, String conteudo) {
+    public static void acrescentarTextoArquivo(String caminhoArquivo, Object conteudo) {
         try {
+            String conteudoString = conteudo.toString();
             FileWriter escritor = new FileWriter(caminhoArquivo, true);
-            escritor.write(conteudo);
+            escritor.write(conteudoString + "\n");
+            escritor.close();
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo: " + caminhoArquivo + " - " + e.getMessage());
         }

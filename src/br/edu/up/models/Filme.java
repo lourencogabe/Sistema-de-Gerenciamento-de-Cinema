@@ -4,10 +4,10 @@ package br.edu.up.models;
  * Classe que Representa um filme.
  */
 public class Filme {
-    private int codigoFilme;
+    private String codigoFilme;
     private String nomeFilme;
     private String generoFilme;
-    private int dataEstreiaFilme;
+    private String dataEstreiaFilme;
     private String sinopseFilme;
 
     /**
@@ -25,7 +25,7 @@ public class Filme {
      * @param dataEstreiaFilme data de estreia do filme.
      * @param sinopseFilme sinopse do filme.
      */
-    public Filme(int codigoFilme, String nomeFilme, String generoFilme, int dataEstreiaFilme, String sinopseFilme) {
+    public Filme(String codigoFilme, String nomeFilme, String generoFilme, String dataEstreiaFilme, String sinopseFilme) {
         this.codigoFilme = codigoFilme;
         this.nomeFilme = nomeFilme;
         this.generoFilme = generoFilme;
@@ -33,11 +33,11 @@ public class Filme {
         this.sinopseFilme = sinopseFilme;
     }
 
-    public int getCodigoFilme() {
+    public String getCodigoFilme() {
         return codigoFilme;
     }
 
-    public void setCodigoFilme(int codigoFilme) {
+    public void setCodigoFilme(String codigoFilme) {
         this.codigoFilme = codigoFilme;
     }
 
@@ -57,11 +57,11 @@ public class Filme {
         this.generoFilme = generoFilme;
     }
 
-    public int getDataEstreiaFilme() {
+    public String getDataEstreiaFilme() {
         return dataEstreiaFilme;
     }
 
-    public void setDataEstreiaFilme(int dataEstreiaFilme) {
+    public void setDataEstreiaFilme(String dataEstreiaFilme) {
         this.dataEstreiaFilme = dataEstreiaFilme;
     }
 
