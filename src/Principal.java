@@ -22,7 +22,44 @@ public class Principal {
 
             if (opcaoPrincipal == 2) {
                 int opcaoFilme;
-                filme.deletarFilme("codigoFilme = 1");
+                String dadoFilme = "";
+
+                do {
+                    System.out.print("|--------------FILME-----------------|\n");
+                    System.out.print("| Opção 1 - Cadastrar Filme \n");
+                    System.out.print("| Opção 2 - Buscar Filme \n");
+                    System.out.print("| Opção 3 - Deletar Filme \n");
+                    System.out.print("| Opção 4 - Ver lista de filmes \n");
+                    System.out.print("| Opção 5 - Criar catalogo \n");
+                    System.out.print("|------------------------------------|\n");
+                    System.out.print("| Opção: \n");
+                    opcaoFilme = leitor.nextInt();
+
+                    switch (opcaoFilme) {
+                        case 1:
+                            filme.cadastrarNovoFilme();
+                            break;
+                        case 2:
+                            System.out.println("Informe o código do filme: ");
+                            dadoFilme = leitor.nextLine();
+                            filme.buscarFilme("codigo=" + dadoFilme);
+                            break;
+                        case 3:
+                            System.out.println("Informe o código do filme: ");
+                            dadoFilme = leitor.nextLine();
+                            filme.deletarFilme("codigo=" + dadoFilme);
+                            break;
+                        case 4:
+                            filme.getListaFilme();
+                            break;
+                        case 5:
+                            filme.criarCatalogo();
+                            break;
+                        default:
+                            System.out.println("Opção inválida.");
+                            break;
+                    }
+                }while (opcaoFilme != 0);
             }
         } while (opcaoPrincipal != 0);
     }

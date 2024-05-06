@@ -18,6 +18,10 @@ public class FilmeController {
     public FilmeController() {
     }
 
+    public void criarCatalogo(){
+        FileManager.criaArquivo(caminho);
+    }
+
     /**
      * Método responsável por realizar o cadastro de um novo filme.
      */
@@ -41,7 +45,7 @@ public class FilmeController {
     /**
      * Método responsável por imprimir o arraylist de filme.
      */
-    public void getListaFilme(){
+     public void getListaFilme(){
         ArrayList<String> listaFilmes = FileManager.retornaListaArquivo(caminho);
         System.out.println(listaFilmes);
         for (String linha : listaFilmes) {
