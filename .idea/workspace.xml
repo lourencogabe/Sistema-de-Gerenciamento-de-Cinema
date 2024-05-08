@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55276c30-bd78-4f2b-a692-84ab68dd6027" name="Changes" comment="feat: primeiro commit">
+      <change afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/SessaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/edu/up/controllers/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/FilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/up/controllers/IngressoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/controllers/IngressoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Ingresso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/up/models/Sessao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/up/models/Sessao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.edu.up.controllers" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,7 +85,8 @@
       <workItem from="1714000319050" duration="5829000" />
       <workItem from="1714649175727" duration="6898000" />
       <workItem from="1714865856056" duration="8444000" />
-      <workItem from="1714928121290" duration="33491000" />
+      <workItem from="1714928121290" duration="38536000" />
+      <workItem from="1715108686846" duration="11452000" />
     </task>
     <task id="LOCAL-00001" summary="feat: primeiro commit">
       <option name="closed" value="true" />

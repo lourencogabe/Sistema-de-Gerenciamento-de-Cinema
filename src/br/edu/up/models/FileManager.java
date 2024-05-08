@@ -41,12 +41,12 @@ public class FileManager {
      */
     public static void escreverListaArquivo(String caminhoArquivo, ArrayList<String> lista) {
         try {
-            FileWriter leitor = new FileWriter(caminhoArquivo);
+            FileWriter escritor = new FileWriter(caminhoArquivo);
             for (String item : lista) {
-                leitor.write(item + "\n");
+                escritor.write(item + "\n");
             }
-            leitor.close();
-            System.out.println("ArrayList gravado com sucesso no arquivo.");
+            escritor.close();
+            System.out.println("\nArquivo salvo.");
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo: " + caminhoArquivo + " - " + e.getMessage());
         }

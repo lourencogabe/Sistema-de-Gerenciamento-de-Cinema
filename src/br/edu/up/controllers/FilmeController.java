@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class FilmeController {
     Scanner leitor = new Scanner(System.in);
-    private String caminho = "/Users/gabriellourenco/Desktop/Trabalho Java/Sistema de Gerenciamento de Cinema/src/br/edu/up/arquivos/documento_filmes.txt";
+    private String caminho = "/Users/gabriellourenco/Desktop/Trabalho Java/Sistema de Gerenciamento de Cinema/src/br/edu/up/arquivos/catalogo_filmes.txt";
 
     /**
      * Construtor Vázio
@@ -47,9 +47,8 @@ public class FilmeController {
      */
      public void getListaFilme(){
         ArrayList<String> listaFilmes = FileManager.retornaListaArquivo(caminho);
-        System.out.println(listaFilmes);
         for (String linha : listaFilmes) {
-            System.out.println(linha);
+            System.out.println(linha + "\n");
         }
     }
 
@@ -58,13 +57,14 @@ public class FilmeController {
      *
      * @param dadoBusca O dado do filme que deve ser encontrado no arquivo.
      */
-    public void buscarFilme(String dadoBusca){
+    public String buscarFilme(String dadoBusca){
         ArrayList<String> listaFilmes = FileManager.retornaListaArquivo(caminho);
         for (String filme : listaFilmes) {
             if (filme.contains(dadoBusca)) {
-                System.out.println("Filme encontrado: " + filme);
+                return filme;
             }
         }
+        return "Filme não encontrado";
     }
 
     /**

@@ -3,10 +3,10 @@ package br.edu.up.models;
 /**
  * Classe que Representa um sessão.
  */
-public class Sessao extends Filme{
+public class Sessao{
     private int codigoSessao;
     private int quantidadeLugaresSessao;
-    private int dataSessao;
+    private String dataSessao;
 
     public Sessao() {
     }
@@ -18,8 +18,7 @@ public class Sessao extends Filme{
      * @param quantidadeLugaresSessao quantidade de lugares disponiveis.
      * @param dataSessao data de agendamento da sessão.
      */
-    public Sessao(String codigoFilme, String nomeFilme, String generoFilme, String dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao) {
-        super(codigoFilme, nomeFilme, generoFilme, dataEstreiaFilme, sinopseFilme);
+    public Sessao(int codigoSessao, int quantidadeLugaresSessao, String dataSessao) {
         this.codigoSessao = codigoSessao;
         this.quantidadeLugaresSessao = quantidadeLugaresSessao;
         this.dataSessao = dataSessao;
@@ -41,12 +40,12 @@ public class Sessao extends Filme{
         this.quantidadeLugaresSessao = quantidadeLugaresSessao;
     }
 
-    public int getDataSessao() {
+    public String getDataSessao() {
         return dataSessao;
     }
 
-    public void setDataSessao(int dataSessao) {
-        this.dataSessao = quantidadeLugaresSessao;
+    public void setDataSessao(String dataSessao) {
+        this.dataSessao = dataSessao;
     }
 
     /**
@@ -57,9 +56,7 @@ public class Sessao extends Filme{
     @Override
     public String toString() {
         return "Sessao{" +
-                "nomeFilme=" + super.getNomeFilme() +
-                ", codigoFilme=" + super.getCodigoFilme() +
-                ", dataSessao=" + dataSessao +
+                "dataSessao=" + dataSessao +
                 ", codigoSessao=" + codigoSessao +
                 ", quantidadeLugares=" + quantidadeLugaresSessao +
                 '}';

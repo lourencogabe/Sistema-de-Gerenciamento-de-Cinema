@@ -5,7 +5,7 @@ package br.edu.up.models;
  */
 public class Cliente{
     public String nomeCliente;
-    public int documentoCliente;
+    public String documentoCliente;
     public int idadeCliente;
     public String contatoCliente;
 
@@ -23,7 +23,7 @@ public class Cliente{
      * @param idadeCliente idade do cliente.
      * @param contatoCliente contato do cliente.
      */
-    public Cliente(String nomeCliente, int documentoCliente, int idadeCliente, String contatoCliente) {
+    public Cliente(String nomeCliente, String documentoCliente, int idadeCliente, String contatoCliente) {
         this.nomeCliente = nomeCliente;
         this.documentoCliente = documentoCliente;
         this.idadeCliente = idadeCliente;
@@ -38,11 +38,11 @@ public class Cliente{
         this.nomeCliente = nomeCliente;
     }
 
-    public int getDocumentoCliente() {
+    public String getDocumentoCliente() {
         return documentoCliente;
     }
 
-    public void setDocumentoCliente(int documentoCliente) {
+    public void setDocumentoCliente(String documentoCliente) {
         this.documentoCliente = documentoCliente;
     }
 

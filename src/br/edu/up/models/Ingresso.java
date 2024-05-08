@@ -5,15 +5,15 @@ import java.util.ArrayList;
 /**
  * Classe que Representa um ingresso.
  */
-public class Ingresso extends Sessao{
+public class Ingresso{
     private int codigoIngresso;
-    private int dataEmissaoIngresso;
+    private float ingressoValor;
+    private String dataEmissaoIngresso;
 
     /**
      * Construtor Vázio
      */
-    public Ingresso() {
-    }
+
 
     /**
      * Construtor com todos os atributos da classe e herança.
@@ -21,10 +21,10 @@ public class Ingresso extends Sessao{
      * @param codigoIngresso código do ingresso.
      * @param dataEmissaoIngresso data de emissão do ingresso.
      */
-    public Ingresso(String codigoFilme, String nomeFilme, String generoFilme, String dataEstreiaFilme, String sinopseFilme, int codigoSessao, int quantidadeLugaresSessao, int dataSessao, int codigoIngresso, int dataEmissaoIngresso) {
-        super(codigoFilme, nomeFilme, generoFilme, dataEstreiaFilme, sinopseFilme, codigoSessao, quantidadeLugaresSessao, dataSessao);
+    public Ingresso(int codigoIngresso, float ingressoValor, String dataEmissaoIngresso) {
         this.codigoIngresso = codigoIngresso;
         this.dataEmissaoIngresso = dataEmissaoIngresso;
+        this.ingressoValor = ingressoValor;
     }
 
     public int getCodigoIngresso() {
@@ -35,17 +35,20 @@ public class Ingresso extends Sessao{
         this.codigoIngresso = codigoIngresso;
     }
 
-    public int getDataEmissaoIngresso() {
+    public String getDataEmissaoIngresso() {
         return dataEmissaoIngresso;
     }
 
-    public void setDataEmissaoIngresso(int dataEmissaoIngresso) {
+    public void setDataEmissaoIngresso(String dataEmissaoIngresso) {
         this.dataEmissaoIngresso = dataEmissaoIngresso;
     }
 
-    public void venderIngresso(){
-        ArrayList<Ingresso> listaIngresso = new ArrayList<>();
+    public float getIngressoValor() {
+        return ingressoValor;
+    }
 
+    public void setIngressoValor(float ingressoValor) {
+        this.ingressoValor = ingressoValor;
     }
 
     /**
@@ -56,10 +59,9 @@ public class Ingresso extends Sessao{
     @Override
     public String toString() {
         return "Ingresso{" +
-                "nomeFilme=" +super.getNomeFilme()+
-                ", codigoIngresso=" + codigoIngresso +
+                "codigoIngresso=" + codigoIngresso +
+                ", ingressoValor=" + ingressoValor +
                 ", dataEmissaoIngresso=" + dataEmissaoIngresso +
-                ", dataSessao=" + super.getDataSessao() +
                 '}';
     }
 }
