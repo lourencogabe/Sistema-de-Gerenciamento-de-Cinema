@@ -60,7 +60,7 @@ public class Principal {
                         case 2:
                             System.out.println("Informe o código do filme:");
                             dadoFilme = leitor.nextLine();
-                            filme.buscarFilme("codigoFilme=" + dadoFilme);
+                            System.out.println(filme.buscarFilme("codigoFilme=" + dadoFilme));
                             break;
                         case 3:
                             System.out.println("Informe o código do filme:");
@@ -108,7 +108,7 @@ public class Principal {
                         case 2:
                             System.out.println("Informe o documento do cliente:");
                             dadoCliente = leitor.nextLine();
-                            cliente.buscarCliente("codigoFilme=" + dadoCliente);
+                            System.out.println(cliente.buscarCliente("codigoFilme=" + dadoCliente));
                             break;
                         case 3:
                             System.out.println("Informe o documento do cliente:");
@@ -184,7 +184,7 @@ public class Principal {
 
                 do {
                     System.out.print("|-------------Ingresso---------------|\n");
-                    System.out.print("| Opção 1 - Cadastrar Filme \n");
+                    System.out.print("| Opção 1 - Vender Ingresso \n");
                     System.out.print("| Opção 0 - Menu Principal \n");
                     System.out.print("|------------------------------------|\n");
                     System.out.print("| Opção: \n");

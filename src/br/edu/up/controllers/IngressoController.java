@@ -29,7 +29,7 @@ public class IngressoController {
     public void venderNovoIngresso() {
         ArrayList<String> ingresso = new ArrayList<>();
 
-        System.out.println("Informe o código do cliente: ");
+        System.out.println("Informe o documento do cliente: ");
         String dadoCliente = leitor.nextLine();
         System.out.println("Informe o código do filme: ");
         String dadoFilme = leitor.nextLine();
